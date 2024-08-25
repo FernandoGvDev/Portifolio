@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando Dev</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Garante que o body ocupe toda a altura da tela */
+        }
+
+        .voltar-topo-container {
+            text-align: center;
+            /* Centraliza o conteúdo dentro do container */
+            margin: 40px 0;
+            /* Adiciona margem acima e abaixo do botão */
+            flex-grow: 1;
+            /* Faz com que o container preencha o espaço disponível */
+        }
+
+        .voltar-topo {
+            display: inline-block;
+            /* Faz o link ser um bloco em linha */
+            padding: 10px 15px;
+            /* Adiciona espaço interno para aumentar a área clicável */
+            background-color: #0A8967;
+            /* Cor de fundo do botão */
+            color: white;
+            /* Cor do texto */
+            border-radius: 5px;
+            /* Bordas arredondadas */
+            text-decoration: none;
+            /* Remove o sublinhado do link */
+            transition: background-color 0.3s;
+            /* Transição suave para a cor de fundo */
+            font-size: 16px;
+            /* Ajusta o tamanho da fonte */
+        }
+
+        .voltar-topo:hover {
+            background-color: #0056b3;
+            /* Cor do fundo ao passar o mouse */
+            cursor: pointer;
+            /* Muda o cursor para indicar que é clicável */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo" id="topo">
+            <img src="assets/Logo-web.png" alt="Fernando">
+        </div>
+        <div>
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#habilidades">Habilidades Técnicas</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre-mim">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="apresentacao">
+        <div class="descricao">
+            <h1>Olá, sou Fernando Gonçalves!</h1>
+            <p>Desenvolvedor web especializado em criar soluções inovadoras e funcionais para o seu 
+                negócio. Comprometido com a constante evolução tecnológica e aprimoramento de 
+                habilidades, estou preparado para oferecer serviços que atendem às necessidades do 
+                mercado. Explore mais sobre minha expertise e os projetos que já desenvolvi</p>
+
+            <div id="social">
+                <div id="inst">
+                    <a href="https://www.instagram.com/fernandogv.dev/" class="social-button" target="_blank">
+                        <img src="assets/instagran-icon.png" alt="Instagram" class="social-icon">
+                        Instagram
+                    </a>
+                </div>
+                <div id="whats">
+                    <a href="https://wa.me/+5551991488088" class="social-button" target="_blank">
+                        <img src="assets/whatsapp-icon.png" alt="WhatsApp" class="social-icon">
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="foto-perfil">
+            <img src="assets/foto-perfil.jpg" alt="Fernando" class="minha-foto">
+        </div>
+    </section>
+
+    <div class="habilidades-section" id="habilidades">
+        <h1> Habilidades Técnicas (Hard-skill)</h1>
+        <div class="habilidades-container">
+            <div class="habilidade">
+                <img src="assets\wordpress-icon.png" alt="WordPress" class="habilidade-img" />
+                <h3>WordPress</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\javascript-icon.png" alt="JavaScript" class="habilidade-img" />
+                <h3>JavaScript</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\java-icon.png" alt="Java" class="habilidade-img" />
+                <h3>Java</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\html-icon.jpg" alt="HTML" class="habilidade-img" />
+                <h3>HTML</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\css-icon.png" alt="CSS" class="habilidade-img" />
+                <h3>CSS</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\csharp-icon.png" alt="C#" class="habilidade-img" />
+                <h3>C#</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\mysql-icon.png" alt="MySQL" class="habilidade-img" />
+                <h3>MySQL</h3>
+            </div>
+
+            <!-- Duplicando as habilidades para o loop contínuo -->
+            <div class="habilidade">
+                <img src="assets\wordpress-icon.png" alt="WordPress" class="habilidade-img" />
+                <h3>WordPress</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\javascript-icon.png" alt="JavaScript" class="habilidade-img" />
+                <h3>JavaScript</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\java-icon.png" alt="Java" class="habilidade-img" />
+                <h3>Java</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\html-icon.jpg" alt="HTML" class="habilidade-img" />
+                <h3>HTML</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\css-icon.png" alt="CSS" class="habilidade-img" />
+                <h3>CSS</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\csharp-icon.png" alt="C#" class="habilidade-img" />
+                <h3>C#</h3>
+            </div>
+            <div class="habilidade">
+                <img src="assets\mysql-icon.png" alt="MySQL" class="habilidade-img" />
+                <h3>MySQL</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="projetos" id="projetos">
+        <h1>Meus Projetos</h1>
+        <div class="projetos-container">
+            <div class="projeto">
+                <img src="assets\novosabor-proj.png" alt="Projeto 1" class="projeto-img" />
+                <h3>site one page</h3>
+                <p>Criei um site one page dinâmico e eficiente para uma lanchonete, proporcionando aos 
+                    clientes uma experiência de pedido online ágil e intuitiva. Com uma interface moderna e 
+                    responsiva, o site integra diretamente com as redes sociais da lanchonete, incluindo Instagram e 
+                    Facebook, potencializando a visibilidade e o engajamento. Além disso, incorporei um link direto 
+                    para o WhatsApp, facilitando a comunicação instantânea e personalizada com os 
+                    clientes, fortalecendo ainda mais a conexão entre a lanchonete e seu público.</p>
+                <!--<a href="link-para-o-projeto1" class="projeto-link">Ver Projeto</a>-->
+            </div>
+            <div class="projeto">
+                <img src="assets\barbearia-proj.png" alt="Projeto 3" class="projeto-img" />
+                <h3>Barbearia</h3>
+                <p>Desenvolvi um site exclusivo para uma barbearia, combinando design sofisticado com 
+                    funcionalidade. O site destaca a localização do estabelecimento, facilitando o 
+                    acesso dos clientes, e integra vídeos do YouTube diretamente na página, oferecendo 
+                    uma experiência visual envolvente e informativa. Com um layout moderno e responsivo, 
+                    o site reflete a identidade da barbearia enquanto conecta os clientes de forma prática e interativa
+                </p>
+                <!-- <a href="link-para-o-projeto3" class="projeto-link">Ver Projeto</a>-->
+            </div>
+
+            <div class="projeto">
+                <img src="assets\lanchonete-proj.png" alt="Projeto 2" class="projeto-img" />
+                <h3>hamburgueria</h3>
+                <p>Desenvolvi um projeto de estudo focado na criação de um site profissional para 
+                    uma hamburgueria, destacando funcionalidades essenciais para o sucesso no 
+                    mercado digital. O site oferece um sistema de pedidos online intuitivo, 
+                    integração direta com o WhatsApp para atendimento personalizado, um cardápio 
+                    interativo que melhora a experiência do usuário e uma seção dedicada ao feedback 
+                    dos clientes, fortalecendo a conexão e a fidelização.
+                </p>
+                <!--<a href="link-para-o-projeto2" class="projeto-link">Ver Projeto</a>-->
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+        </div>
+    </div>
+
+    <div class="softskills">
+        <h2>Habilidades Interpessoais (Soft-skill)</h2>
+        <div class="softskills-container">
+            <div class="softskill">
+                <h3>Comunicação</h3>
+                <p>Capacidade de expressar ideias de forma clara e eficaz, promovendo um bom entendimento entre equipes
+                    e partes interessadas.</p>
+            </div>
+            <div class="softskill">
+                <h3>Trabalho em Equipe</h3>
+                <p>A habilidade de colaborar com os outros para alcançar um objetivo comum, respeitando e valorizando as
+                    contribuições dos membros da equipe.</p>
+            </div>
+            <div class="softskill">
+                <h3>Resolução de Problemas</h3>
+                <p>Habilidade para analisar a situação, identificar problemas e desenvolver soluções eficazes e
+                    criativas.</p>
+            </div>
+            <div class="softskill">
+                <h3>Empatia</h3>
+                <p>Capacidade de entender e compartilhar os sentimentos dos outros, criando um ambiente de trabalho mais
+                    compreensivo e colaborativo.</p>
+            </div>
+            <div class="softskill">
+                <h3>Adaptabilidade</h3>
+                <p>Facilidade em se ajustar a novas condições, mantendo a eficácia em ambientes dinâmicos e
+                    desafiadores.</p>
+            </div>
+            <div class="softskill">
+                <h3>Gerenciamento de Tempo</h3>
+                <p>Capacidade de planejar e organizar tarefas para maximizar a produtividade e cumprir prazos.</p>
+            </div>
+            <!-- Adicione mais soft skills conforme necessário -->
+        </div>
+    </div>
+
+    <div class="servicos" id="servicos">
+        <h2>Meus Serviços</h2>
+        <div class="servicos-container">
+            <div class="servico">
+                <h3>Design Gráfico</h3>
+                <p>Criação de logotipos, materiais de marketing e identidade visual de marcas.</p>
+                <button onclick="SaibaMais('Design Gráfico')">Saiba Mais</button>
+            </div>
+            <div class="servico">
+                <h3>Desenvolvimento Web</h3>
+                <p>Construção de sites responsivos e aplicações web com foco na experiência do usuário.</p>
+                <button onclick="SaibaMais('Desenvolvimento Web')">Saiba Mais</button>
+            </div>
+            <div class="servico">
+                <h3>Criação de Conteúdo</h3>
+                <p>Produção de artigos, posts em redes sociais e conteúdo otimizado para SEO.</p>
+                <button onclick="SaibaMais('Criação de Conteúdo')">Saiba Mais</button>                
+            </div>                
+            <div class="servico">
+                <h3>Gerenciamento de Estoque</h3>
+                <p>Software de gestão de depósitos com controle total de estoque e rastreamento em tempo real.</p>
+                <button onclick="SaibaMais('Gerenciamento de Estoque')">Saiba Mais</button>                </div>
+            <div class="servico">
+                <h3>Suporte Técnico</h3>
+                <p>Assistência e manutenção de sistemas e aplicações para garantir um funcionamento adequado.</p>
+                <button onclick="SaibaMais('Suporte Técnico')">Saiba Mais</button>
+            </div>
+                <!-- Adicione mais serviços conforme necessário -->
+        </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+
+    </div>
+
+        <div class="sobre-mim" id="sobre-mim">
+            <h2>Sobre Mim</h2>
+            <div class="sobre-mim-container">
+                <p>Olá! Sou um desenvolvedor apaixonado por transformar ideias em soluções inovadoras através da
+                    programação. Resido em Palmares do Sul, RS, e atualmente trabalho com desenvolvimento front-end,
+                    enquanto estudo back-end para expandir minhas habilidades e evoluir na carreira. Com uma vasta
+                    experiência em várias linguagens e tecnologias, tenho contribuído para projetos pessoais e desafios
+                    profissionais, sempre em busca de criar soluções impactantes e eficientes.</p>
+
+                <h3>Habilidades</h3>
+                <ul>
+                    <li><strong>HTML & CSS:</strong> Construção de estruturas e estilos para páginas web responsivas e
+                        atraentes.</li>
+                    <li><strong>JavaScript:</strong> Desenvolvimento de interatividade e funcionalidades dinâmicas para
+                        websites.</li>
+                    <li><strong>Python:</strong> Criação de scripts e aplicações com foco em eficiência e simplicidade.
+                    </li>
+                    <li><strong>Java:</strong> Desenvolvimento de aplicativos robustos e escaláveis, tanto para web
+                        quanto para desktop.</li>
+                    <li><strong>C#:</strong> Programação de aplicações para ambientes Microsoft, incluindo jogos e
+                        softwares empresariais.</li>
+                    <!-- Adicione ou remova linguagens conforme necessário -->
+                </ul>
+
+                <h3>Projetos</h3>
+                <p>
+                    Realizei <strong>10 projetos de estudo</strong> que aprofundaram meus conhecimentos e habilidades
+                    práticas.
+                    Além disso, contribui para <strong>2 projetos para clientes</strong>, ajudando a transformar suas
+                    visões em soluções funcionais e de alta qualidade.
+                </p>
+            </div>
+        </div>
+        <div class="voltar-topo-container">
+            <a href="#top" class="voltar-topo">Voltar ao Topo</a>
+        </div>
+
+        <script src="codes.js"></script>
+
+</body>
+</div>
+</body>
+
+</html>

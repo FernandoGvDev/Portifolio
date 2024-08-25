@@ -1,0 +1,802 @@
+/* Estilos Gerais do Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0d192b;
+    /* Cor de fundo */
+    color: #fff;
+    /* Cor do texto */
+}
+
+/* Logo */
+.logo img {
+    max-height: 150px;
+    /* Limita a altura do logo */
+}
+
+/* menu navegação */
+nav ul {
+    list-style-type: none;
+    /* Remove os marcadores */
+    display: flex;
+    /* Para que os itens do menu fiquem lado a lado */
+    gap: 20px;
+    /* Espaçamento entre os itens do menu */
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul li a {
+    border-radius: 15px;
+    color: #07f9a2;
+    /* Cor do texto do menu */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    padding: 5px 15px;
+    /* Adiciona preenchimento */
+    transition: background-color 0.3s;
+    /* Transição suave para a cor de fundo */
+
+}
+
+
+nav ul li a:hover {
+    background-color: #0a8967;
+    /* Cor ao passar o mouse */
+}
+
+
+/* Responsividade */
+/* Estilo para o ícone de menu (três traços) */
+
+.menu-toggle {
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        /* Coloca os elementos em linha em telas menores */
+        align-items: flex-start;
+        /* Alinha os itens ao topo */
+    }
+
+    nav ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        /* Coloca o menu em coluna */
+        top: 60px;
+        /* Ajuste conforme necessário */
+        right: 0;
+        background-color: #0d192b;
+        border-radius: 15%;
+        border: 1px solid white;
+        width: auto;
+        height: auto;
+        margin: -20px;
+        transform: translateX(100%);
+        /* Inicialmente oculta o menu */
+        transition: transform 0.9s ease-in-out;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex; 
+        transform: translateX(0);
+        /* Mostra o menu quando a classe 'show' é adicionada */
+    }
+
+    nav ul li {
+        width: 100%;
+        /* Faz com que os itens do menu ocupem toda a largura */
+        text-align: center;
+        /* Centraliza o texto */
+        padding: 20px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        /* Exibe o botão de menu em dispositivos móveis */
+    }
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 769px) {
+    nav ul {
+        display: flex;
+        /* Exibe o menu em linha */
+        position: static;
+        /* Remove o posicionamento absoluto */
+        background-color: transparent;
+        /* Remove a cor de fundo em telas maiores */
+        width: auto;
+        /* Ajusta a largura para se ajustar ao conteúdo */
+        height: auto;
+        /* Ajusta a altura conforme necessário */
+        transform: none;
+        /* Remove a transformação */
+    }
+
+    .menu-toggle {
+        display: none;
+        /* Oculta o botão de menu em telas maiores */
+    }
+}
+
+/*Apresentação*/
+
+:root {
+    --cor-fundo: #0d192b;
+    --cor-texto: #fff;
+    --cor-destaque: #07f9a2;
+    --cor-hover: #0a8967;
+}
+
+.apresentacao {
+    min-height: 500px;
+    /* Pode aumentar conforme necessário */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ebe68d;
+    /* Cor de fundo suave */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem linha em telas menores */
+}
+
+#social {
+    display: flex;
+    gap: 20px;
+    /* Espaço entre os botões */
+    margin-top: 20px;
+    /* Margem acima dos botões */
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    /* Alinha o ícone e o texto verticalmente */
+    text-decoration: none;
+    /* Remove sublinhado */
+    background-color: #0A8967;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do texto */
+    padding: 10px;
+    /* Espaço interno */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    transition: background-color 0.3s;
+    /* Efeito de transição */
+}
+
+.social-button:hover {
+    background-color: #0056b3;
+    /* Cor ao passar o mouse */
+}
+
+.social-icon {
+    margin-right: 10px;
+    /* Espaço entre o ícone e o texto */
+    width: 24px;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    height: 24px;
+    /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+
+.foto-perfil {
+    flex: 1;
+    text-align: center;
+    /* Centraliza a imagem */
+}
+
+.minha-foto {
+    width: 200px;
+    /* Ajuste o tamanho da foto conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 50%;
+    /* Torna a imagem redonda */
+    transition: transform 0.8s ease;
+    /* Transição suave para o efeito de hover */
+}
+
+.foto-perfil:hover .minha-foto {
+    transform: scale(1.2);
+    /* Aumenta a imagem em 20% */
+}
+
+.descricao {
+    flex: 2;
+    padding-left: 20px;
+    /* Espaço entre a foto e o texto */
+}
+
+h1 {
+    color: black;
+    font-size: 30px;
+    margin: 0;
+    transition: color 0.5s ease;
+    /* Transição suave para o cabeçalho */
+}
+
+.descricao:hover h1 {
+    color: var(--cor-hover);
+    /* Altera a cor do título */
+}
+
+p {
+    color: #0d192b;
+    font-size: 20px;
+    line-height: 1.6;
+    /* Melhora a legibilidade */
+    transition: color 0.5s ease;
+    /* Transição suave para o parágrafo */
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 768px) {
+    .apresentacao {
+        flex-direction: column;
+        /* Muda o layout para uma coluna em telas menores */
+        padding: 10px;
+        /* Reduz o padding */
+    }
+
+    .descricao {
+        padding-left: 0;
+        /* Remove o padding lateral */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .minha-foto {
+        width: 150px;
+        /* Diminuindo o tamanho da foto para telas menores */
+    }
+
+    h1 {
+        font-size: 24px;
+        /* Tamanho de fonte menor para o título */
+    }
+
+    p {
+        font-size: 18px;
+        /* Tamanho de fonte menor para o parágrafo */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+        /* Tamanho de fonte ainda menor em telas muito pequenas */
+    }
+
+    p {
+        font-size: 16px;
+        /* Tamanho de fonte ainda menor em telas muito pequenas */
+    }
+}
+
+/* hard-skill */
+
+.habilidades-section {
+    background-color: var(--cor-fundo);
+    padding: 20px;
+    border-radius: 1px;
+    overflow: hidden;
+    /* Esconde os itens que saem da tela */
+    position: relative;
+}
+
+.habilidades-section h1 {
+    color: var(--cor-texto);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.habilidades-container {
+    display: flex;
+    white-space: nowrap;
+    /* Impede quebra de linha nos itens */
+    animation: mover 20s linear infinite;
+    /* Animação para mover os itens */
+}
+
+.habilidade {
+    display: inline-block;
+    margin: 0 30px;
+    /* Espaçamento entre as habilidades */
+}
+
+.habilidade-img {
+    width: 50px;
+    /* Ajuste conforme necessário */
+    height: 50px;
+    /* Ajuste conforme necessário */
+    display: block;
+    margin: 0 auto 10px;
+    /* Centraliza a imagem */
+}
+
+.habilidade h3 {
+    color: var(--cor-destaque);
+    /* Cor do título */
+    text-align: center;
+}
+
+/* Animação de movimento */
+@keyframes mover {
+    5% {
+        transform: translateX(0);
+        /* Começa no start */
+    }
+
+    100% {
+        transform: translateX(-90%);
+        /* Move para o final dos itens (metade do container) */
+    }
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 768px) {
+    .habilidade-img {
+        width: 40px;
+        /* Reduz a imagem em telas menores */
+        height: 40px;
+        /* Reduz a imagem em telas menores */
+    }
+
+    .habilidade h3 {
+        font-size: 14px;
+        /* Ajusta o tamanho do texto em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .habilidade-img {
+        width: 30px;
+        /* Reduz ainda mais a imagem em telas muito pequenas */
+        height: 30px;
+        /* Reduz ainda mais a imagem em telas muito pequenas */
+    }
+
+    .habilidade h3 {
+        font-size: 12px;
+        /* Ajusta o tamanho do texto em telas muito pequenas */
+    }
+}
+
+.projetos {
+    background-color: #ebe68d;
+    /* Cor de fundo para a seção */
+    padding: 40px 20px;
+    border-radius: 8px;
+    /* Aumentando a borda */
+    /* Espaçamento superior para separar das habilidades */
+}
+
+.projetos h1 {
+    font-size: 250%;
+    text-align: center;
+    /* Cor do texto do título */
+    margin-bottom: 20px;
+    color: #0c5149;
+}
+
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite múltiplas linhas */
+    justify-content: space-around;
+    /* Alinha os itens de forma centralizada */
+}
+
+.projeto {
+    background-color: white;
+    /* Fundo branco para projetos */
+    border: 1px solid #07f9a2;
+    /* Borda leve */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    width: calc(30% - 20px);
+    /* Largura dos itens dos projetos */
+    margin: 10px;
+    /* Margem entre os projetos */
+    padding: 20px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centralizando texto */
+    transition: transform 0.8s;
+    /* Efeito ao passar o mouse */
+}
+
+.projeto:hover {
+
+    transform: scale(1.1);
+    /* Aumenta a imagem em 10% */
+}
+
+.projeto-img {
+    width: 100%;
+    /* Ajusta a largura da imagem */
+    height: auto;
+    /* Altura automática para manter a proporção */
+    border-radius: 5px;
+    /* Bordas arredondadas nas imagens */
+}
+
+/*Projetos*/
+
+.projeto h3 {
+    color: #0a8967;
+    /* Cor do título do projeto */
+    margin: 4px 0;
+    /* Espaçamento acima e abaixo do título */
+}
+
+.projeto p {
+    color: #0d192b;
+    /* Cor do texto da descrição */
+    margin-bottom: 15px;
+    /* Margem abaixo da descrição */
+}
+
+/*.projeto-link {
+    display: inline-block;  Melhor formatação 
+    padding: 10px 15px;  Botão espaçado 
+    background-color: #0a8967;  Cor de fundo do botão 
+    color: white;  Cor do texto do botão 
+    border-radius: 5px;  Bordas arredondadas para o botão 
+    text-decoration: none;  Remove o sublinhado do link 
+    transition: background-color 0.3s;  Transição suave para a cor 
+}
+
+.projeto-link:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse 
+}
+*/
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .projeto {
+        width: calc(45% - 20px);
+        /* Reduz a largura em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .projeto {
+        width: 100%;
+        /* Ocupa toda a largura em telas muito pequenas */
+    }
+}
+
+/* soft-skill */
+
+.softskills {
+    background-color: #0d192b;
+    /* Cor de fundo para a seção */
+    padding: 40px 20px;
+    border-radius: 8px;
+    /* Aumentando a borda */
+    margin-top: 30px;
+    /* Espaçamento superior para separar dos projetos */
+}
+
+.softskills h2 {
+    font-size: 200%;
+    text-align: center;
+    color: #ffffff;
+    /* Cor do texto do título */
+    margin-bottom: 20px;
+}
+
+.softskills-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite múltiplas linhas */
+    justify-content: space-around;
+    /* Alinha os itens de forma centralizada */
+}
+
+.softskill {
+    background-color: white;
+    /* Fundo branco para as soft skills */
+    border: 1px solid #07f9a2;
+    /* Borda leve */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    width: calc(30% - 20px);
+    /* Largura dos itens das soft skills */
+    margin: 10px;
+    /* Margem entre as soft skills */
+    padding: 20px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centralizando texto */
+    transition: transform 0.2s;
+    /* Efeito ao passar o mouse */
+}
+
+.softskill:hover {
+    transform: translateY(-10px);
+    /* Levanta a soft skill ao passar o mouse */
+}
+
+.softskill h3 {
+    color: #09c184;
+    /* Cor do título da soft skill */
+    margin: 10px 0;
+    /* Espaçamento acima e abaixo do título */
+}
+
+.softskill p {
+    color: #0d192b;
+    /* Cor do texto da descrição */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .softskill {
+        width: calc(45% - 20px);
+        /* Reduz a largura em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .softskill {
+        width: 100%;
+        /* Ocupa toda a largura em telas muito pequenas */
+    }
+}
+
+/* serviços */
+
+.servicos {
+    background-color: #ebe68d;
+    /* Cor de fundo branco para a seção */
+    padding: 40px 20px;
+    margin-top: 30px;
+    /* Espaçamento */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.servicos h2 {
+    font-size: 200%;
+    color: #0d192b;
+    /* Cor do texto do título */
+    margin-bottom: 20px;
+}
+
+.servicos-container {
+    display: grid;
+    /* Utiliza grid para um layout responsivo */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Colunas responsivas */
+    gap: 20px;
+    /* Espaçamento entre os serviços */
+}
+
+.servico {
+    background-color: #0a8967;
+    /* Cor de fundo dos serviços */
+    font-size: 125%;
+    color: white;
+    /* Cor do texto */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    padding: 20px;
+    /* Padding interno */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Efeito de transição */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra sutil para destaque */
+}
+
+.servico:hover {
+    transform: translateY(-5px);
+    /* Levanta o serviço ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra mais intensa ao passar o mouse */
+}
+
+.servico h3 {
+    margin-bottom: 10px;
+    /* Margem abaixo do título */
+}
+
+.servico p {
+    margin-bottom: 15px;
+    /* Margem abaixo da descrição */
+}
+
+.servico-link {
+    display: inline-block;
+    /* Melhoria na formatação */
+    padding: 10px 15px;
+    /* Botão espaçado */
+    background-color: #ffffff;
+    /* Cor de fundo do botão */
+    color: #07f9a2;
+    /* Cor do texto do botão */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    font-size: 115%;
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+    transition: background-color 0.3s;
+    /* Transição suave para a cor */
+}
+
+.servico-link:hover {
+    background-color: #0062cc;
+    /* Cor do botão ao passar o mouse */
+    color: white;
+    /* Mudança da cor do texto do botão */
+}
+
+/*botões do serviços*/
+/* Estilo geral para o botão */
+button {
+    background-color: #ffffff; /* Azul padrão */
+    border: none;
+    color: #07f9a2;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #00448d; /* Azul mais escuro */
+}
+
+/* Estilo para botões em diferentes estados */
+button:active {
+    background-color: #002042; /* Azul ainda mais escuro quando clicado */
+    transform: scale(0.98); /* Leve redução de tamanho para dar efeito de clique */
+}
+
+/* Estilo para botões desabilitados */
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/*model de descrição*/
+/* O modal fica escondido por padrão */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Botão de fechar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Sobre-mim */
+
+.sobre-mim {
+    background-color: #ebe68d;
+    /* Cor de fundo leve para a seção */
+    padding: 40px 20px;
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    margin-top: 30px;
+    /* Espaçamento superior */
+}
+
+.sobre-mim h2 {
+    text-align: center;
+    color: #333;
+    /* Cor do texto do título */
+    margin-bottom: 20px;
+}
+
+.sobre-mim-container {
+    max-width: 800px;
+    /* Largura máxima da seção */
+    margin: 0 auto;
+    /* Centraliza a seção */
+}
+
+.sobre-mim-container p {
+    line-height: 1.6;
+    /* Melhora a legibilidade */
+    color: #555;
+    /* Cor do texto principal */
+    margin-bottom: 20px;
+    /* Margem abaixo do parágrafo */
+}
+
+.sobre-mim-container h3 {
+    color: #0a8967;
+    /* Cor do texto dos subtítulos */
+    margin-top: 20px;
+    /* Espaçamento acima do subtítulo */
+    margin-bottom: 10px;
+    /* Espaçamento abaixo do subtítulo */
+}
+
+.sobre-mim-container ul {
+    list-style-type: disc;
+    /* Marcadores nos itens da lista */
+    padding-left: 20px;
+    /* Espaçamento à esquerda */
+    color: #555;
+    /* Cor dos itens da lista */
+}
+
+.sobre-mim-container li {
+    margin-bottom: 5px;
+    /* Espaçamento entre itens da lista */
+}
+
+/* Estilos para animação */
+.animated-section {
+    opacity: 0;
+    /* Começa invisível */
+    transform: translateX(-150px);
+    /* Posiciona para fora da tela à esquerda */
+    transition: opacity 0.5s ease-out, transform 2.40s ease-out;
+    /* Transição suave */
+}
+
+.animated-section.visible {
+    opacity: 1;
+    /* Revela a seção */
+    transform: translateX(0);
+    /* Move a seção para sua posição original */
+}
